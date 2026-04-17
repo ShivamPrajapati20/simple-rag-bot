@@ -1,10 +1,9 @@
-# Simple RAG Bot — Week 9
+# Simple RAG Bot
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![NumPy](https://img.shields.io/badge/NumPy-1.26+-orange)
 ![Sentence Transformers](https://img.shields.io/badge/Embeddings-sentence--transformers-green)
 ![Anthropic](https://img.shields.io/badge/Powered%20by-Claude%20Haiku-purple)
-![License](https://img.shields.io/badge/license-MIT-orange)
 
 A RAG (Retrieval-Augmented Generation) Q&A bot built **from scratch** — no vector database libraries, no LangChain. Just Python, NumPy, and the Anthropic API.
 
@@ -66,7 +65,7 @@ Answer: I could not find that in the document.
 
 ### Prerequisites
 - Python 3.11+
-- Anthropic API key — free at [console.anthropic.com](https://console.anthropic.com)
+- Anthropic API key
 
 ### Installation
 
@@ -124,16 +123,6 @@ simple-rag-bot/
 
 ---
 
-## Known limitations
-
-- **No persistence** — embeddings are stored in memory only. Close the script and they are gone. Re-embedding happens every time you start.
-- **Simple chunking** — splits by word count, not by sentence or paragraph. A chunk may cut mid-sentence.
-- **Slow at scale** — linear search across all chunks. Fine for small documents, slow for 10,000+ chunks.
-
-These limitations are exactly what [Week 10 (ChromaDB)](https://github.com/ShivamPrajapati20/pdf-rag-bot) fixes.
-
----
-
 ## Tech stack
 
 | Tool | Purpose |
@@ -143,25 +132,3 @@ These limitations are exactly what [Week 10 (ChromaDB)](https://github.com/Shiva
 | NumPy | Cosine similarity calculation |
 | Anthropic SDK | Claude API for answering questions |
 | python-dotenv | Secure API key loading |
-
----
-
-## Part of my AI Engineering roadmap
-
-This is Project 7 of my AI/LLM Engineering learning journey — Phase 3, Week 9.
-
-**Previous projects:**
-- [AI CLI Chatbot](https://github.com/ShivamPrajapati20/ai-cli-chatbot)
-- [AI Data Analyser](https://github.com/ShivamPrajapati20/ai-data-analyser)
-- [Prompt Library](https://github.com/ShivamPrajapati20/prompt-library)
-- [AI JD Pipeline](https://github.com/ShivamPrajapati20/ai-jd-pipeline)
-- [LLM Benchmark](https://github.com/ShivamPrajapati20/llm-benchmark)
-- [Resume Analyser](https://github.com/ShivamPrajapati20/resume-analyser)
-
-**Next:** [Week 10 — ChromaDB persistent vector storage](https://github.com/ShivamPrajapati20/pdf-rag-bot)
-
----
-
-## License
-
-MIT
